@@ -5,19 +5,15 @@ def reformat_languages(languages)
     value1.each do |key2,value2|
      value2.each do |key3,value3|
         if new_hash[key2] == nil 
-        new_hash[key2]={key3 => value3}
+         new_hash[key2]={key3 => value3}
         end
-        
-          if new_hash[key2][:style] == nil 
+        if new_hash[key2][:style] == nil 
           new_hash[key2][:style] = [key1]
-          else
+        else
           new_hash[key2][:style].push(key1)
-          
-          end
-       
+        end
       end
     end
-    
-    end
-     new_hash
   end
+     new_hash
+end
